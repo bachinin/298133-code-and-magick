@@ -11,7 +11,7 @@ var renderCloud = function (ctx, x, y, color) {
   ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
 };
 
-var getMaxElement = function(arr) {
+var getMaxElement = function (arr) {
   var maxElement = arr[0];
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] > maxElement) {
@@ -19,7 +19,7 @@ var getMaxElement = function(arr) {
     }
   }
   return maxElement;
-}
+};
 
 window.renderStatistics = function (ctx, names, times) {
 
@@ -34,7 +34,7 @@ window.renderStatistics = function (ctx, names, times) {
   var maxTime = getMaxElement(times);
 
   for (var i = 0; i < names.length; i++) {
-    var barHeight = - (HISTOGRAM_HEIGHT * times[i] / maxTime);
+    var barHeight = -(HISTOGRAM_HEIGHT * times[i] / maxTime);
     if (names[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
     } else {
