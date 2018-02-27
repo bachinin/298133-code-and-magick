@@ -56,7 +56,7 @@ var setupClose = document.querySelector('.setup-close');
 var setupOpenIcon = document.querySelector('.setup-open-icon');
 var setupUserName = document.querySelector('.setup-user-name');
 
-var onPopupKeydownPress = function(evt) {
+var onPopupKeydownPress = function (evt) {
   if (evt.keyCode === ESC_KEYCODE) {
     if (evt.target === setupUserName) {
       setupUserName.value = '';
@@ -71,12 +71,12 @@ var onPopupKeydownPress = function(evt) {
   }
 };
 
-var openPopup = function() {
+var openPopup = function () {
   userDialog.classList.remove('hidden');
   document.addEventListener('keydown', onPopupKeydownPress);
 };
 
-var closePopup = function() {
+var closePopup = function () {
   userDialog.classList.add('hidden');
   document.removeEventListener('keydown', onPopupKeydownPress);
 };
@@ -111,6 +111,3 @@ wizardEyes.addEventListener('click', function () {
 fireballWrap.addEventListener('click', function () {
   fireballWrap.style.backgroundColor = fireballColorList[getRandomInt(0, fireballColorList.length)];
 });
-
-
-
